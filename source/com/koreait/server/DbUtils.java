@@ -1,15 +1,15 @@
 package com.koreait.server;
 
-import java.lang.management.ManagementFactory;
 import java.sql.*;
 
 public class DbUtils {
-    public static Connection getCon() throws SQLException {
+    public static Connection getCon() throws Exception {
         final String URL = "jdbc:mysql://localhost:3308/test";
         final String USERNAME = "root";
         final String PASSWORD = "koreait";
+        Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-        System.out.println("접속 성공!");
+        System.out.println("Connection Success! 접속성공");
         return con;
     }
 
