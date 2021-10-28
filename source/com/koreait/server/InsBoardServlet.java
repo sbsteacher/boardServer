@@ -9,10 +9,6 @@ import java.io.IOException;
 
 @WebServlet("/ins")
 public class InsBoardServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        System.out.println("Test!!!!!");
-    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
